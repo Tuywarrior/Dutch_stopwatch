@@ -1,0 +1,246 @@
+body {
+  background: rgb(13, 186, 230);
+  color: #333;
+  font-family: Helvetica, sans-serif;
+}
+
+ul {
+  list-style: none;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+}
+
+li {
+  position: absolute;
+  transform-origin: 50% 100%;
+  height: 160px;
+}
+
+.hours {
+  left: 120px;
+  font-size: 23.3333333333px;
+  letter-spacing: -1.6px;
+  line-height: 45px;
+}
+.hours li {
+  width: 80px;
+}
+.hours span {
+  display: block;
+}
+.hours li:nth-of-type(1) {
+  transform: rotate(18deg);
+}
+.hours li:nth-of-type(1) span {
+  transform: rotate(-18deg);
+}
+.hours li:nth-of-type(2) {
+  transform: rotate(36deg);
+}
+.hours li:nth-of-type(2) span {
+  transform: rotate(-36deg);
+}
+.hours li:nth-of-type(3) {
+  transform: rotate(54deg);
+}
+.hours li:nth-of-type(3) span {
+  transform: rotate(-54deg);
+}
+.hours li:nth-of-type(4) {
+  transform: rotate(72deg);
+}
+.hours li:nth-of-type(4) span {
+  transform: rotate(-72deg);
+}
+.hours li:nth-of-type(5) {
+  transform: rotate(90deg);
+}
+.hours li:nth-of-type(5) span {
+  transform: rotate(-90deg);
+}
+.hours li:nth-of-type(6) {
+  transform: rotate(108deg);
+}
+.hours li:nth-of-type(6) span {
+  transform: rotate(-108deg);
+}
+.hours li:nth-of-type(7) {
+  transform: rotate(126deg);
+}
+.hours li:nth-of-type(7) span {
+  transform: rotate(-126deg);
+}
+.hours li:nth-of-type(8) {
+  transform: rotate(144deg);
+}
+.hours li:nth-of-type(8) span {
+  transform: rotate(-144deg);
+}
+.hours li:nth-of-type(9) {
+  transform: rotate(162deg);
+}
+.hours li:nth-of-type(9) span {
+  transform: rotate(-162deg);
+}
+.hours li:nth-of-type(10) {
+  transform: rotate(180deg);
+}
+.hours li:nth-of-type(10) span {
+  transform: rotate(-180deg);
+}
+.hours li:nth-of-type(11) {
+  transform: rotate(198deg);
+}
+.hours li:nth-of-type(11) span {
+  transform: rotate(-198deg);
+}
+.hours li:nth-of-type(12) {
+  transform: rotate(216deg);
+}
+.hours li:nth-of-type(12) span {
+  transform: rotate(-216deg);
+}
+.hours li:nth-of-type(13) {
+  transform: rotate(234deg);
+}
+.hours li:nth-of-type(13) span {
+  transform: rotate(-234deg);
+}
+.hours li:nth-of-type(14) {
+  transform: rotate(252deg);
+}
+.hours li:nth-of-type(14) span {
+  transform: rotate(-252deg);
+}
+.hours li:nth-of-type(15) {
+  transform: rotate(270deg);
+}
+.hours li:nth-of-type(15) span {
+  transform: rotate(-270deg);
+}
+.hours li:nth-of-type(16) {
+  transform: rotate(288deg);
+}
+.hours li:nth-of-type(16) span {
+  transform: rotate(-288deg);
+}
+.hours li:nth-of-type(17) {
+  transform: rotate(306deg);
+}
+.hours li:nth-of-type(17) span {
+  transform: rotate(-306deg);
+}
+.hours li:nth-of-type(18) {
+  transform: rotate(324deg);
+}
+.hours li:nth-of-type(18) span {
+  transform: rotate(-324deg);
+}
+.hours li:nth-of-type(19) {
+  transform: rotate(342deg);
+}
+.hours li:nth-of-type(19) span {
+  transform: rotate(-342deg);
+}
+
+#clock {
+  background: #fff;
+  border: 15px solid #222;
+  border-radius: 50%;
+  position: relative;
+  width: 320px;
+  height: 320px;
+  margin: 100px auto;
+  margin-right: 200px;
+}
+
+/* JavaScript pre-rotates these wrappers instead of the hands when getting the time at load. If it pre-rotates the hands, then the hands will not perform 1 turn at their normal speeds. */
+.hr-wrapper,
+.min-wrapper,
+.sec-wrapper {
+  position: relative;
+  width: 320px;
+  height: 320px;
+}
+
+.hand {
+  position: absolute;
+  bottom: 50%;
+  transform-origin: 50% 100%;
+  z-index: 1;
+}
+
+.sec {
+  background: #d00;
+  left: 156.5px;
+  width: 5px;
+  height: 132px;
+  border-radius: 8px;
+  animation: rotateHand 60s linear infinite;
+}
+.sec:after {
+  background: #d00;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -3.5px;
+  width: 5px;
+  height: 7px;
+}
+
+/* @keyframes rotateHand {
+  to {
+    transform: rotate(0.5turn);
+  }
+} */
+
+/* @keyframes rotatehand {
+  from {
+    transform: rotate(0.5);
+  }
+  to {
+    transform: rotate(1);
+  }
+} */
+/* @keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+} */
+.entire {
+  display: flex;
+  flex-direction: row;
+}
+.end {
+  margin-top: 120px;
+  margin-left: 50px;
+  position: absolute;
+}
+#start,
+#stop,
+#reset {
+  margin-bottom: 10px;
+  margin-left: 350px;
+  display: flex;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  padding-left: 110px;
+  padding-top: 110px;
+  opacity: 0.7;
+}
